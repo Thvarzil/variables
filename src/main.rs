@@ -11,4 +11,22 @@ fn main() {
     println!("The value of x is: {}", x);
     x = 6;
     println!("The value of x is: {}", x);
+
+    //Incrementing x as an example of shadowing.
+    let x = x + 1;
+
+    let x = x * 2;
+
+    println!("The value of x is: {}", x);
+
+    let mut spaces = "     ";
+    //the following line doesn't work because we can't mutate a
+    //variable's type - shadowing allows reusing a simple name where
+    //the mut keyword doesn't:
+
+    //spaces = spaces.len();
+
+    //with shadowing:
+    let spaces = spaces.len();
+
 }
